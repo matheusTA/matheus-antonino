@@ -6,6 +6,7 @@ module.exports = {
     description: `A blog about fron-end development and other cool stuff.`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
