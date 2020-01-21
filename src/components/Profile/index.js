@@ -5,7 +5,7 @@ import Avatar from '../Avatar'
 import { ProfileAuthor, ProfileDescription, ProfileLink, ProfilePosition, ProfileWrapper } from './styles'
 
 export default function Profile() {
-  const { site: { siteMetadata: { title, position, description } } } =
+  const { site: { siteMetadata: { author, position, description } } } =
     useStaticQuery(
       graphql`
         query MySiteMetadata {
@@ -13,7 +13,7 @@ export default function Profile() {
             siteMetadata {
               position
               description
-              title
+              author
             }
           }
         }`
@@ -24,7 +24,7 @@ export default function Profile() {
       <ProfileLink>
         <Avatar />
         < ProfileAuthor >
-          {title}
+          {author}
 
           <ProfilePosition>{position}</ProfilePosition>
         </ProfileAuthor >
