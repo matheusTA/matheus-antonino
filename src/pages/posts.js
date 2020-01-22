@@ -1,21 +1,48 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PostItem from '../components/PostItem'
 
-const PostsPage = () => (
-  <Layout>
-    <SEO title="Posts" />
-    <PostItem
-      slug="/about/"
-      category="Misc"
-      date="30 de Julho de 2019"
-      timeToRead="5"
-      title="Diga não ao Medium: tenha sua própria plataforma"
-      description="Algumas razões para você ter sua própria plataforma ao invés de soluções como o Medium."
-    />
-  </Layout>
-)
+const PostsPage = () => {
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query PostList {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              background
+              category
+              date(locale: "pt-br", formatString: "DD [de] MMM [de] YYYY")
+              description
+              title
+            }
+            timeToRead
+          }
+        }
+      }
+    }
+  `)
 
+  const postList = allMarkdownRemark.edges
+
+  return (
+    <Layout>
+      <SEO title="Posts" />
+      {postList.map(({ node: { frontmatter: { background, category, date, title, description }, timeToRead } }, i) => (
+        <PostItem
+          key={i}
+          slug="/about/"
+          category={category}
+          date={date}
+          timeToRead={timeToRead}
+          title={title}
+          description={description}
+          background={background}
+        />
+      ))}
+    </Layout>
+  )
+}
 export default PostsPage

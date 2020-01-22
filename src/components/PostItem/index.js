@@ -10,7 +10,7 @@ export default function PostItem({ slug, background, category, date, timeToRead,
         <PostItemTag background={background}>{category}</PostItemTag>
 
         <PostItemInfo>
-          <PostItemDate>{date} • {timeToRead}</PostItemDate>
+          <PostItemDate>{date} • {timeToRead} mim de leitura</PostItemDate>
 
           <PostItemTitle>{title}</PostItemTitle>
           <PostItemDescription>{description}</PostItemDescription>
@@ -25,7 +25,7 @@ PostItem.propTypes = {
   background: PropTypes.string,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }
