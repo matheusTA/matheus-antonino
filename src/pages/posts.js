@@ -19,6 +19,9 @@ const PostsPage = () => {
               title
             }
             timeToRead
+            fields {
+              slug
+            }
           }
         }
       }
@@ -30,10 +33,10 @@ const PostsPage = () => {
   return (
     <Layout>
       <SEO title="Posts" />
-      {postList.map(({ node: { frontmatter: { background, category, date, title, description }, timeToRead } }, i) => (
+      {postList.map(({ node: { frontmatter: { background, category, date, title, description }, timeToRead, fields: { slug } } }, i) => (
         <PostItem
           key={i}
-          slug="/about/"
+          slug={slug}
           category={category}
           date={date}
           timeToRead={timeToRead}
