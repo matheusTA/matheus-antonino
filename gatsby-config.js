@@ -3,7 +3,7 @@ module.exports = {
     title: `Matheus Antonino`,
     author: `Matheus Antonino`,
     position: "Developer",
-    description: `This is my personal website, where you can meet me and see some of my posts about the world of technology.`,
+    description: `This is my personal website, where you can meet me and see some of my posts about the world of technology and development.`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -13,6 +13,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
       },
     },
     `gatsby-transformer-sharp`,
