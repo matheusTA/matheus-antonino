@@ -26,20 +26,20 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
   {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 5, skip: 5) {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             background
             category
-            date(locale: "pt-br", formatString: "DD [de] MMM [de] YYYY")
+            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description
             title
           }
           timeToRead
-          fields {
-            slug
-          }
         }
         next {
           frontmatter {
@@ -50,16 +50,17 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
         previous {
-          frontmatter {
-            title
-          }
           fields {
             slug
+          }
+          frontmatter {
+            title
           }
         }
       }
     }
-  }`).then(result => {
+  }
+  `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(({ node, next, previous }) => {
