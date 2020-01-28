@@ -5,8 +5,8 @@ module.exports = {
   siteMetadata: {
     title: `Matheus Antonino`,
     author: `Matheus Antonino`,
-    position: "Developer",
-    description: `This is my personal website, where you can meet me and see some of my posts about the world of technology and development.`,
+    position: "Desenvolvedor",
+    description: `Este é o meu site pessoal, onde você pode me conhecer e ver algumas das minhas postagens sobre o mundo da tecnologia e do desenvolvimento.`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

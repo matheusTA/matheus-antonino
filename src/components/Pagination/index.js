@@ -7,9 +7,9 @@ import { PaginationWrapper } from './styles'
 export default function Pagination({ isFirst, isLast, currentPage, numPages, prevPage, nextPage }) {
   return (
     <PaginationWrapper>
-      {!isFirst && <Link to={prevPage}>Previous page</Link>}
-      <p>{currentPage} Of {numPages}</p>
-      {!isLast && <Link to={nextPage}>Next page</Link>}
+      {!isFirst && <Link to={prevPage}>Página anterior</Link>}
+      <p>{currentPage} De {numPages}</p>
+      {!isLast && <Link to={nextPage}>Próxima página</Link>}
     </PaginationWrapper>
   )
 }

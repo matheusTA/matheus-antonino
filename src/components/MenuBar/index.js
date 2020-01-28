@@ -26,12 +26,12 @@ export default function MenuBar() {
   return (
     <MenuBarWrapper>
       <MenuBarGroup>
-        <MenuBarLink to="/" title="Back to Home">
+        <MenuBarLink to="/" title="Voltar para a página principal.">
           <MenuBarItem>
             <Home />
           </MenuBarItem>
         </MenuBarLink>
-        <MenuBarLink to="/search" title="Search">
+        <MenuBarLink to="/search" title="Pesquisar.">
           <MenuBarItem>
             <Search />
           </MenuBarItem>
@@ -41,7 +41,7 @@ export default function MenuBar() {
 
       <MenuBarGroup>
         <MenuBarItem
-          title="Change the theme"
+          title="Mudar o tema."
           onClick={() => {
             window.__setPreferredTheme(isDarkMode ? "light" : "dark")
           }}
@@ -50,13 +50,13 @@ export default function MenuBar() {
           <Light />
         </MenuBarItem>
         <MenuBarItem
-          title="Change the display"
+          title="Mudar a visualização."
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}>
           {isListMode ? <Grid /> : <List />}
         </MenuBarItem>
-        <MenuBarItem title="Go to the top">
+        <MenuBarItem title="Voltar ao topo.">
           <Arrow />
         </MenuBarItem>
       </MenuBarGroup>

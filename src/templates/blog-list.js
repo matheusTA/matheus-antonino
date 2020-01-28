@@ -18,7 +18,7 @@ export default function BlogList(props) {
 
   return (
     <Layout>
-      <SEO title="Posts" />
+      <SEO title="Postagens" />
       <ListWrapper>
         {postList.map(({ node: { frontmatter: { background, category, date, title, description }, timeToRead, fields: { slug } } }, i) => (
           <PostItem

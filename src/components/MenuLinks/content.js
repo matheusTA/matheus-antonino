@@ -1,10 +1,10 @@
 const links = [
   {
-    label: 'About Me',
+    label: 'Sobre Mim',
     url: '/'
   },
   {
-    label: 'Posts',
+    label: 'Postagens',
     url: '/posts/'
   }
 ]
