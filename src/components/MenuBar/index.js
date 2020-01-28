@@ -4,17 +4,23 @@ import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { Bulb as Light } from "styled-icons/boxicons-regular/Bulb"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
+import { ThList as List } from 'styled-icons/typicons/ThList'
 
 import { MenuBarGroup, MenuBarItem, MenuBarLink, MenuBarWrapper } from './styles'
 
 export default function MenuBar() {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
   const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
+
     window.__onThemeChange = () => setTheme(window.__theme)
+    window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
   return (
@@ -43,8 +49,12 @@ export default function MenuBar() {
         >
           <Light />
         </MenuBarItem>
-        <MenuBarItem title="Change the display">
-          <Grid />
+        <MenuBarItem
+          title="Change the display"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
+          }}>
+          {isListMode ? <Grid /> : <List />}
         </MenuBarItem>
         <MenuBarItem title="Go to the top">
           <Arrow />
