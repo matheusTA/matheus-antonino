@@ -9,7 +9,7 @@ export default function Sidebar() {
   return (
     <SidebarWrapper>
       <Profile />
-      <SocialLinks />
+      <SocialLinks hideStyle={true} />
       <MenuLinks />
     </SidebarWrapper>
   );

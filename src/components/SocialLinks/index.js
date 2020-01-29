@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 import Icons from './Icons'
 import links from './content'
 import { SocialLinkWrapper, SocialLinksList, SocialLinksItem, SocialLinksLink, IconWrapper } from './styles';
 
-export default function SocialLinks() {
+export default function SocialLinks({ hideStyle }) {
   return (
-    <SocialLinkWrapper>
+    <SocialLinkWrapper hideStyle={hideStyle}>
       <SocialLinksList>
         {links.map((link, i) => {
           const Icon = Icons[link.label]
@@ -22,4 +23,8 @@ export default function SocialLinks() {
       </SocialLinksList>
     </SocialLinkWrapper>
   );
+}
+
+SocialLinks.propTypes = {
+  hideStyle: PropTypes.bool.isRequired
 }

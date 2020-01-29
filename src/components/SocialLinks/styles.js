@@ -6,7 +6,7 @@ export const SocialLinkWrapper = styled.nav`
   width: 100%;
 
   ${media.lessThan('large')`
-    display: none;
+    display: ${props => props.hideStyle ? 'none' : ''};
   `}
 `;
 
@@ -14,7 +14,7 @@ export const SocialLinksList = styled.ul`
   align-items: center;
   display: flex;
   justify-content: space-evenly;
-  list-style: none;
+  list-style: none !important;
 `
 
 export const SocialLinksItem = styled.li``
