@@ -5,7 +5,13 @@ import { PostItemDate, PostItemDescription, PostItemInfo, PostItemLink, PostItem
 
 export default function PostItem({ slug, background, category, date, timeToRead, title, description }) {
   return (
-    <PostItemLink to={slug}>
+    <PostItemLink
+      to={slug}
+      cover
+      direction="right"
+      bg="#16202c"
+      duration={0.6}
+    >
       <PostItemWrapper>
         <PostItemTag background={background}>{category}</PostItemTag>
 

@@ -9,6 +9,7 @@ module.exports = {
     description: `Este é o meu site pessoal, onde você pode me conhecer e ver algumas das minhas postagens sobre o mundo da tecnologia e do desenvolvimento.`,
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     // needs to be the first to work with gatsby-remark-images

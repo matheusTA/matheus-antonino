@@ -26,12 +26,26 @@ export default function MenuBar() {
   return (
     <MenuBarWrapper>
       <MenuBarGroup>
-        <MenuBarLink to="/" title="Voltar para a página principal.">
+        <MenuBarLink
+          to="/"
+          title="Voltar para a página principal."
+          cover
+          direction="right"
+          bg="#16202c"
+          duration={0.6}
+        >
           <MenuBarItem>
             <Home />
           </MenuBarItem>
         </MenuBarLink>
-        <MenuBarLink to="/search" title="Pesquisar.">
+        <MenuBarLink
+          to="/search"
+          title="Pesquisar."
+          cover
+          direction="right"
+          bg="#16202c"
+          duration={0.6}
+        >
           <MenuBarItem>
             <Search />
           </MenuBarItem>
