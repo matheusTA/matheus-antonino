@@ -1,6 +1,7 @@
 import React from "react"
 import propTypes from "prop-types"
 import * as S from "./styles"
+import getThemeColor from "../../utils/getThemeColor"
 
 export default function RecommendedPosts({ next, previous }) {
 
@@ -12,7 +13,7 @@ export default function RecommendedPosts({ next, previous }) {
           className="previous"
           cover
           direction="left"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
         >
           {previous.frontmatter.title}
@@ -24,7 +25,7 @@ export default function RecommendedPosts({ next, previous }) {
           className="next"
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
         >
           {next.frontmatter.title}

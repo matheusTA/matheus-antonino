@@ -2,6 +2,7 @@ import React from 'react'
 
 import links from './content'
 import { MenuLinksWrapper, MenuLinksList, MenuLinksItem, MenuLinksLink } from './styles';
+import getThemeColor from "../../utils/getThemeColor"
 
 export default function MenuLinks() {
 
@@ -13,7 +14,7 @@ export default function MenuLinks() {
             <MenuLinksLink
               cover
               direction="left"
-              bg="#16202c"
+              bg={getThemeColor()}
               duration={0.6}
               to={link.url}
               activeClassName="active"

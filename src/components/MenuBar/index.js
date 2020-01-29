@@ -8,6 +8,8 @@ import { ThList as List } from 'styled-icons/typicons/ThList'
 
 import { MenuBarGroup, MenuBarItem, MenuBarLink, MenuBarWrapper } from './styles'
 
+import getThemeColor from "../../utils/getThemeColor"
+
 export default function MenuBar() {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
@@ -31,7 +33,7 @@ export default function MenuBar() {
           title="Voltar para a página principal."
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
         >
           <MenuBarItem>
@@ -43,7 +45,7 @@ export default function MenuBar() {
           title="Pesquisar."
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
         >
           <MenuBarItem>

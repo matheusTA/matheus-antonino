@@ -3,6 +3,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import propTypes from "prop-types"
 
 import { PaginationWrapper } from './styles'
+import getThemeColor from "../../utils/getThemeColor"
 
 export default function Pagination({ isFirst, isLast, currentPage, numPages, prevPage, nextPage }) {
   return (
@@ -11,14 +12,14 @@ export default function Pagination({ isFirst, isLast, currentPage, numPages, pre
         to={prevPage}
         cover
         direction="left"
-        bg="#16202c"
+        bg={getThemeColor()}
         duration={0.6}>Página anterior</AniLink>}
       <p>{currentPage} De {numPages}</p>
       {!isLast && <AniLink
         to={nextPage}
         cover
         direction="right"
-        bg="#16202c"
+        bg={getThemeColor()}
         duration={0.6}>Próxima página</AniLink>}
     </PaginationWrapper>
   )
