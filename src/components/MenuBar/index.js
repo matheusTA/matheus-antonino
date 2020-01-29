@@ -53,7 +53,9 @@ export default function MenuBar() {
           title="Mudar a visualização."
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
-          }}>
+          }}
+          className="display"
+        >
           {isListMode ? <Grid /> : <List />}
         </MenuBarItem>
         <MenuBarItem title="Voltar ao topo.">
