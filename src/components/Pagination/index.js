@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import propTypes from "prop-types"
 
