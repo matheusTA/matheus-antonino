@@ -7,7 +7,7 @@ module.exports = {
     author: `Matheus Antonino`,
     position: "Desenvolvedor",
     description: `Este é o meu site pessoal, onde você pode me conhecer e ver algumas das minhas postagens sobre o mundo da tecnologia e do desenvolvimento.`,
-    siteUrl: `https://matheus-antonino.com`
+    siteUrl: `https://matheus-antonino.netlify.com/`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
