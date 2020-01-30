@@ -35,6 +35,7 @@ export default function AboutMe() {
         <li>Css Frameworks (Bootstrap)</li>
         <li>Javascript (Design Patterns, Testes, ES6/7)</li>
         <li>ReactJS / Redux / Flux</li>
+        <li>React-Native / Redux / Flux</li>
         <li>NodeJS</li>
         <li>Git - Github</li>
         <li>MySQL - MongoDB</li>
