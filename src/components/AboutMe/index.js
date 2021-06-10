@@ -9,9 +9,9 @@ export default function AboutMe() {
       <h1>Sobre mim</h1>
       <p>
         Meu nome é Matheus Trajano Antonino, nasci em Recife/PE e
-        atualmente estou cursando ciência da computação e trabalho como analista de software na{' '}
-        <a href="https://www.concrete.com.br/" target="_blank" rel="noopener noreferrer">
-          Concrete.
+        atualmente estou cursando ciência da computação e trabalho como engenheiro de software na{' '}
+        <a href="https://abletech.info/#/" target="_blank" rel="noopener noreferrer">
+          Able Tech.
         </a>
         {' '}Tenho uma paixão pelo design web e adoro desenvolver para dispositivos móveis e web.
       </p>
